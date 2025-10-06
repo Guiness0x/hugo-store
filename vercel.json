@@ -1,9 +1,0 @@
-{
-  "buildCommand": "./build.sh",
-  "outputDirectory": "public",
-  "framework": null,
-  "env": {
-    "HUGO_ENV": "production",
-    "HUGO_ENABLEWARNINGS": "true"
-  }
-}
