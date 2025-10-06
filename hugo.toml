@@ -3,7 +3,9 @@ languageCode = "en-us"
 title = "Ismir Peregrine Dossiers"
 theme = "PaperMod"
 
-paginate = 5
+[pagination]
+  pagerSize = 5
+
 enableRobotsTXT = true
 
 [params]
