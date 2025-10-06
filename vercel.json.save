@@ -1,0 +1,24 @@
+o 7.2                                      vercel.json                                               {
+  "buildCommand": "hugo",
+  "outputDirectory": "public",
+  "framework": "hugo",
+  "env": {
+    "HUGO_VERSION": "0.123.7",
+    "HUGO_ENABLEWARNINGS": "true"
+  }
+o 7.2                                      vercel.json                                               {
+  "buildCommand": "hugo",
+  "outputDirectory": "public",
+  "framework": "hugo",
+  "env": {
+    "HUGO_VERSION": "0.123.7",
+    "HUGO_ENABLEWARNINGS": "true"
+  }
+}{
+  "buildCommand": "hugo",
+  "outputDirectory": "public",
+  "framework": "hugo",
+  "env": {
+    "HUGO_VERSION": "0.123.7",
+    "HUGO_ENABLEWARNINGS": "true"
+  }
