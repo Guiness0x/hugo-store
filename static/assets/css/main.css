@@ -1,0 +1,41 @@
+/* Telemetry Signal States */
+.sigil[data-state="active"] {
+  box-shadow: 0 0 10px 3px rgba(255, 0, 0, 0.8);
+  animation: pulseActive 4s ease-in-out infinite;
+}
+
+.sigil[data-state="degraded"] {
+  box-shadow: 0 0 12px 4px rgba(255, 0, 0, 0.9);
+  animation: pulseDegraded 1.5s ease-in-out infinite;
+}
+
+.sigil[data-state="pending"] {
+  box-shadow: 0 0 14px 6px rgba(255, 128, 0, 0.9);
+  animation: pulsePending 0.8s ease-in-out infinite;
+}
+
+.sigil[data-state="offline"] {
+  box-shadow: 0 0 8px 2px rgba(64, 0, 0, 0.6);
+  animation: pulseOffline 0.4s ease-in-out infinite;
+}
+
+/* Keyframes */
+@keyframes pulseActive {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+
+@keyframes pulseDegraded {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes pulsePending {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes pulseOffline {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.1; }
+}

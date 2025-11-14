@@ -1,0 +1,173 @@
+/* ==============================================
+🩸 Dossiers Node Motion Governor — Phase 3.2
+================================================ */
+
+/* Base Node Pulse Timing — reusable vars */
+:root {
+  --node-pulse-speed: 2.2s;
+  --node-pulse-color: rgba(255, 0, 55, 0.9);
+  --node-fade-color: rgba(255, 0, 55, 0.25);
+}
+
+/* Active Node (Normal Sync) */
+.active-node {
+  animation: nodePulse var(--node-pulse-speed) ease-in-out infinite;
+  box-shadow: 0 0 15px var(--node-pulse-color);
+}
+
+/* Alert Node (Degraded Connection) */
+.alert-node {
+  animation: nodeBlink var(--node-pulse-speed) linear infinite;
+  box-shadow: 0 0 10px rgba(255, 150, 0, 0.9);
+}
+
+/* Offline Node (Dormant / Deactivated) */
+.offline-node {
+  opacity: 0.3;
+  filter: blur(0.5px);
+}
+
+/* ======================
+   Keyframe Logic
+====================== */
+@keyframes nodePulse {
+  0%, 100% {
+    box-shadow: 0 0 8px var(--node-fade-color);
+    opacity: 0.9;
+  }
+  50% {
+    box-shadow: 0 0 20px var(--node-pulse-color);
+    opacity: 1;
+  }
+}
+
+@keyframes nodeBlink {
+  0%, 90%, 100% {
+    box-shadow: 0 0 8px rgba(255, 150, 0, 0.4);
+    opacity: 0.6;
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(255, 150, 0, 1);
+    opacity: 1;
+  }
+}
+
+/* ==============================================
+🩸 Dossiers Node Responsive Logic — Phase 3.2.5
+================================================ */
+
+/* Base grid behavior */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1.2rem 2rem;
+  border-radius: 0.4rem;
+  transition: transform 0.3s ease, box-shadow 0.4s ease;
+}
+
+/* Hover interaction */
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(255, 0, 55, 0.6);
+}
+
+/* --- Viewport tiers --- */
+
+/* Compact / Mobile (≤ 768 px) */
+@media (max-width: 768px) {
+  .card {
+    padding: 0.8rem 1.2rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Tablet / Midrange (≤ 1024 px) */
+@media (max-width: 1024px) {
+  .card {
+    padding: 1rem 1.5rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Large / Ultrawide (≥ 1440 px) */
+@media (min-width: 1440px) {
+  .card {
+    padding: 1.5rem 2.5rem;
+    border-radius: 0.5rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* ==============================================
+🩸 Dossiers Node — Mobile File Layout (≤768 px)
+================================================ */
+@media (max-width: 768px) {
+  body {
+    background: #0a0a0a;
+    color: #e4e4e4;
+    font-family: 'JetBrains Mono', monospace;
+    padding: 0 1rem;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .card {
+    width: 100%;
+    border: 1px solid rgba(255, 0, 55, 0.4);
+    border-left: 3px solid rgba(255, 0, 55, 0.9);
+    background: rgba(12, 12, 12, 0.85);
+    padding: 1.2rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 8px rgba(255, 0, 55, 0.25);
+    transform: none;
+  }
+
+  .card:hover {
+    transform: none; /* No bounce on handhelds */
+  }
+
+  h2 {
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.3rem;
+  }
+
+  p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  /* Optional: page header as file header */
+  header, .site-title {
+    text-align: center;
+    font-weight: 600;
+    border-bottom: 1px dashed rgba(255,0,55,0.5);
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.4rem;
+    letter-spacing: 0.08em;
+  }
+}

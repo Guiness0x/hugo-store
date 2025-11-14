@@ -1,0 +1,8 @@
+{
+  "nodes": [
+    { "id": "vault", "name": "Vault — Archive System", "status": "active", "desc": "Currently synchronized and verified." },
+    { "id": "telemetry", "name": "Telemetry — Signal Loss", "status": "degraded", "desc": "Connection timeout. Awaiting response." },
+    { "id": "propagation", "name": "Propagation Unit — Dormant", "status": "pending", "desc": "Node temporarily deactivated." },
+    { "id": "store", "name": "Store — Public Node", "status": "offline", "desc": "Node temporarily offline for maintenance." }
+  ]
+}

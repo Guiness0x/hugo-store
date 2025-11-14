@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Dossiers Operational Node{% endblock title %}</title>
+  <link rel="stylesheet" href="{{ get_url(path='css/main.css') }}">
+</head>
+
+<body>
+  <header>
+    <div class="sigil-container"><div class="sigil"></div></div>
+    <h1 class="site-title">🩸 Dossiers Operational Node</h1>
+    {% include "partials/nav.html" %}
+    <hr>
+  </header>
+
+  <main>
+    {% block content %}{% endblock content %}
+  </main>
+
+  {% include "partials/hud.html" %}
+
+  <footer>
+    <hr>
+    {% include "partials/status.html" %}
+  </footer>
+</body>
+</html>
+
+<!-- ==========================================
+🩸 Dossiers — Telemetry Runtime Injection
+=========================================== -->
+<script src="/assets/js/telemetry.js"></script>
+
+<!-- ===================== -->
+<!-- TELEMETRY CONSOLE HUD -->
+<!-- ===================== -->
+<div class="telemetry-console"
+     style="text-align:right;
+            color:#ff004c;
+            font-family:'JetBrains Mono', monospace;
+            font-size:0.9em;
+            margin-top:20px;
+            padding-right:20px;">
+  [SYS] Telemetry sweep in progress...
+</div>
+
+</body>
+</html>

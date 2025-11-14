@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dossiers Operational Node</title>
+    <link rel="stylesheet" href="{{ get_url(path='css/main.css') }}">
+  </head>
+
+  <body class="node-interface">
+    {% include "partials/header.html" %}
+
+    <main id="core-node" class="main-grid">
+      <section class="node-panel">
+        {{ section.content | safe }}
+      </section>
+    </main>
+
+    {% include "partials/footer.html" %}
+  </body>
+</html>
