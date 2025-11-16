@@ -1,9 +1,7 @@
 # The URL the site will be built for
-base_url = "https://store-7dh79xyu1-guiness-logs.vercel.app/"
+base_url = "https://dossiers.vercel.app/"
 title = "Dossiers Operational Node"
 description = "Operational interface for the Dossiers Node."
-compile_sass = true
-build_search_index = false
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
